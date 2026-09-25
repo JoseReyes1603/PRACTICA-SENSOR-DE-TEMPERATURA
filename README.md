@@ -10,4 +10,4 @@ El objetivo de esta practica es usar un sensor de temperatura para que encienda 
 ## Video
 [Ver video en YouTube](https://youtube.com/shorts/wKR66s4NWjg?feature=share)
 ## Resultados 
-[Ver archivo pdf]()
+[Ver archivo pdf](https://github.com/JoseReyes1603/PRACTICA-SENSOR-DE-TEMPERATURA/blob/main/Resultados/Practica_Arduino_DHT11_LED.pdf)
