@@ -10,3 +10,4 @@ El objetivo de esta practica es usar un sensor de temperatura para que encienda 
 ## Video
 [Ver video en YouTube](https://youtube.com/shorts/wKR66s4NWjg?feature=share)
 ## Resultados 
+[Ver archivo pdf]()
