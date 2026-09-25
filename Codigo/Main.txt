@@ -1,1 +1,41 @@
 
+#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+#define LEDPIN 8
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+  pinMode(LEDPIN, OUTPUT);
+  digitalWrite(LEDPIN, LOW);
+}
+
+void loop() {
+  delay(2000);
+
+  float humedad = dht.readHumidity();
+  float temperatura = dht.readTemperature();
+
+  if (isnan(humedad) || isnan(temperatura)) {
+    Serial.println("Error al leer el sensor DHT11");
+    return;
+  }
+
+  Serial.print("Humedad: ");
+  Serial.print(humedad);
+  Serial.print(" % | Temperatura: ");
+  Serial.print(temperatura);
+  Serial.print(" *C | LED: ");
+
+  if (temperatura >= 22 && temperatura < 23) {
+    digitalWrite(LEDPIN, HIGH);
+    Serial.println("ENCENDIDO");
+  } else {
+    digitalWrite(LEDPIN, LOW);
+    Serial.println("APAGADO");
+  }
+}
